@@ -2,6 +2,7 @@ const boton = document.querySelector(".btn");
 const calc = document.querySelector(".calcular");
 const mostar = document.querySelector(".Buscar");
 const crear = document.querySelector(".crear");
+const eliminar = document.querySelector(".eliminar");
 
 let array = [];
 
@@ -22,7 +23,6 @@ class Productos{
             Precio: ${this.pre}
             Cantidad: ${this.cant}`);
     }
-
 
 }
 
@@ -59,8 +59,6 @@ calc.addEventListener("click", () =>{
 
 });
 
-
-
 //buscar los productos
 
 let nom;
@@ -89,16 +87,11 @@ function buscarProducto (datoUsuario){
         nameProdu = encontrar.nom;
         precioProdu = encontrar.pre;
         cantidadProdu = encontrar.cant;
-
         console.log(`
             Nombre: ${nameProdu}
             Precio: ${precioProdu}
             Cantidad: ${cantidadProdu}`)
-
     }
-    
-
-    
 }
 
 //agregar productos
@@ -113,6 +106,17 @@ crear.addEventListener("click", ()=>{
 
 
 //Elmininar productos
+
+eliminar.addEventListener("click", () =>{
+    let nomEliminar = prompt("Que elemento deseas eliminar");
+    const nuevoArray = array.filter(objeto => objeto.nom !== nomEliminar);
+    if (array.length === nuevoArray.length){
+        console.log("Objeto no encontrado");
+    }else{
+        console.log("objeto eliminado");
+        array = nuevoArray;
+    }
+})
 
 
 
