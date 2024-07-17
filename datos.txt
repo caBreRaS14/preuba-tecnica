@@ -1,0 +1,17 @@
+
+Crear una estructura de datos para representar los productos en el inventario.
+Cada producto debe tener un nombre, un precio unitario y una cantidad en stock.
+
+Leer los datos del inventario desde un archivo, base de datos o proporcionarlos 
+directamente en el código.
+
+Permitir al usuario realizar las siguientes acciones:
+
+Consultar el inventario y mostrar la lista de productos con sus detalles.
+Calcular el valor total del inventario, que es la suma del valor de cada producto
+en stock (precio unitario * cantidad en stock).
+Buscar un producto por nombre y mostrar sus detalles.
+Agregar o eliminar productos del inventario.
+Actualizar la cantidad en stock de un producto.
+Mostrar los resultados de las acciones en la consola o en una interfaz de usuario
+simple.
